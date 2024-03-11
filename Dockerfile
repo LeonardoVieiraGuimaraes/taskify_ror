@@ -22,4 +22,4 @@ COPY . /myapp
 EXPOSE 3000
 
 # Define the command to start the server
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["sh", "-c", "bin/rails db:migrate && bin/rails server -b 0.0.0.0"]
